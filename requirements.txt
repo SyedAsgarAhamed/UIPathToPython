@@ -1,0 +1,5 @@
+robocorp
+robocorp-browser
+playwright
+requests
+openpyxl

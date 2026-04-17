@@ -1,0 +1,14 @@
+[configurations]
+profile = "default"
+
+[build]
+ignore = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "*.pyc",
+    ".robocorp",
+    "output",
+]
+
+space_constrained = false

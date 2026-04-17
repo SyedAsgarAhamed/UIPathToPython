@@ -1,0 +1,21 @@
+minRobotVersion: "5.0.0"
+documentation:
+  name: UIPath to Python Image Downloader
+  description: |
+    Producer-Consumer pattern to download images from websites.
+    Demonstrates queue processing with Robocorp.
+  homepage: https://github.com/your-repo
+condaConfigUrl: https://downloads.robocorp.cloud/condarc
+
+tasks:
+  producer:
+    robotTaskName: producer_add_images_to_queue
+    description: Create work items for image download
+  consumer:
+    robotTaskName: consumer_process_image_queue
+    description: Process work items and download images
+
+artifactsDir: ./output
+outputDir: ./output
+logsDir: ./output
+temp: ./.robocorp/temp

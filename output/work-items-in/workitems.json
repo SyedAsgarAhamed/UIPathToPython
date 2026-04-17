@@ -1,0 +1,12 @@
+[
+  {
+    "url": "https://www.python.org",
+    "selector": "img.python-logo",
+    "name": "python_logo.png"
+  },
+  {
+    "url": "https://news.ycombinator.com",
+    "selector": "img.y18",
+    "name": "hn_logo.gif"
+  }
+]
