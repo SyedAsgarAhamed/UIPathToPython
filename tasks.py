@@ -98,6 +98,13 @@ def consumer_process_image_queue():
         except Exception as e:
             print(f"Failed to process {url}. Error: {str(e)}")
 
+@task
+def run_all():
+    """
+    Run producer and consumer in the same container execution.
+    """
+    producer_add_images_to_queue()
+    consumer_process_image_queue()
 
 if __name__ == "__main__":
     import sys
@@ -106,8 +113,11 @@ if __name__ == "__main__":
         producer_add_images_to_queue()
     elif len(sys.argv) > 1 and sys.argv[1] == "consumer":
         consumer_process_image_queue()
+    elif len(sys.argv) > 1 and sys.argv[1] == "run_all":
+        run_all()
     else:
-        print("Usage: python tasks.py [producer|consumer]")
+        print("Usage: python tasks.py [producer|consumer|run_all]")
         print("  producer - Create work items")
         print("  consumer - Process work items")
+        print("  run_all  - Run producer and consumer in one execution")
 
