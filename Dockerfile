@@ -19,6 +19,9 @@ COPY robot.yaml .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Install Playwright browsers - this is the critical step
+RUN playwright install chromium
+
 # Create output directory
 RUN mkdir -p output/work-items-in output/work-items-out output/shared_drive
 
