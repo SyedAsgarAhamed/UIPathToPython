@@ -33,8 +33,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN playwright install-deps chromium
 RUN playwright install chromium
 
-# CRITICAL: Initialize Robocorp Browser (THIS WAS MISSING)
-RUN python -m Browser init --yes
 
 # Copy app
 COPY . .

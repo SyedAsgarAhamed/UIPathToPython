@@ -45,7 +45,7 @@ def consumer_process_image_queue():
     browser.configure(
         browser_engine="chromium",
         headless=True,
-        install=False,  
+        install=True,  
         isolated=False, 
     )
 
