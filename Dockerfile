@@ -29,6 +29,9 @@ RUN apt-get update && apt-get install -y \
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Set Playwright browser path to match Robocorp's expected location
+ENV PLAYWRIGHT_BROWSERS_PATH=/root/.robocorp/playwright
+
 # Install Playwright browsers + deps
 RUN playwright install-deps chromium
 RUN playwright install chromium
